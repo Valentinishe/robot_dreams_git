@@ -60,6 +60,7 @@ install_or_update_package() {
 detect_os;
 echo "$OS";
 
+# перебір пакетів
 for package_name in "$@"; do
   install_or_update_package "$package_name";
 done
