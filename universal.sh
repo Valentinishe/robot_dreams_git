@@ -58,6 +58,7 @@ install_or_update_package() {
 
 
 detect_os;
+
 echo "$OS";
 
 # перебір пакетів
