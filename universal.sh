@@ -18,7 +18,7 @@ detect_os() {
   fi
 }
 
-# універсальна функція що встановлює або оновлює пакет
+# універсальна функція що встановлює або оновлює пакет в залежності від операційної системи.
 install_or_update_package() {
   package_name="$1"
 
@@ -60,6 +60,7 @@ install_or_update_package() {
 detect_os;
 echo "$OS";
 
+# перебір пакетів
 for package_name in "$@"; do
   install_or_update_package "$package_name";
 done
