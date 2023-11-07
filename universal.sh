@@ -2,6 +2,7 @@
 
 OS="";
 
+# функція, що визначає операційну систему.
 detect_os() { 
   if [ -f /etc/lsb-release ]; then
     OS="ubuntu";
@@ -17,6 +18,7 @@ detect_os() {
   fi
 }
 
+# універсальна функція що встановлює або оновлює пакет
 install_or_update_package() {
   package_name="$1"
 
